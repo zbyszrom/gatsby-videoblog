@@ -4,12 +4,11 @@ import Layout from '../components/layout';
 
 
 
-
 const VideoTemplate = (props) => {
     return (
         <Layout>
         
-       video
+       tekst
         
         </Layout>
     )

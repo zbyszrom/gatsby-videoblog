@@ -8,6 +8,7 @@ const VideoArchive = (props) => {
     return (
         <Layout>
             <NavCategories/>
+            <h2>Tu będą filmy róznych kategorii</h2>
         </Layout>
     )
 

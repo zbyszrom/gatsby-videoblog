@@ -6,7 +6,10 @@ import Layout from '../components/layout'
 const TextArchive = (props) => {
 
     return (
-        <Layout/>
+        <Layout>
+            <h2>Tu będą wszystkie tksty</h2>
+        </Layout>
+
     )
 
 }

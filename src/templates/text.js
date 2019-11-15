@@ -4,16 +4,16 @@ import Layout from '../components/layout';
 
 
 
-const VideoTemplate = (props) => {
+const LyricTemplate = (props) => {
     return (
         <Layout>
         
-       tekst
+       <h2>tekst</h2>
         
         </Layout>
     )
 }
 
-export default VideoTemplate;
+export default LyricTemplate;
 
 

@@ -23,7 +23,7 @@ exports.createPages = ({ actions, graphql }) => {
  const getVideo = makeRequest(graphql, `
    {
      allContentfulVideo (
-       
+      sort: { fields: videoCreatedAt, order: DESC }
        )
      {
        edges {
@@ -50,7 +50,7 @@ exports.createPages = ({ actions, graphql }) => {
  const getLyric = makeRequest(graphql, `
    {
      allContentfulLyric (
-      
+      sort: { fields: [createdAt], order: DESC }
     )
   {
        edges {
@@ -80,8 +80,8 @@ exports.createPages = ({ actions, graphql }) => {
 const getArchive = makeRequest(graphql, `
 {
   allContentfulVideo (
-    
-    )
+    sort: { fields: videoCreatedAt, order: DESC }
+  )
   {
     edges {
       node {

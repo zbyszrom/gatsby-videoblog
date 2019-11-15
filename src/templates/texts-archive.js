@@ -7,7 +7,7 @@ const TextArchive = (props) => {
 
     return (
         <Layout>
-            <h2>Tu będą wszystkie tksty</h2>
+            <h2>Tu będą wszystkie teksty</h2>
         </Layout>
 
     )

@@ -3,14 +3,14 @@ import { Link, graphql, navigate } from 'gatsby'
 import Layout from '../components/layout'
 import NavCategories from '../components/nav-categories'
 
-const VideoArchive = (props) => {
+const VideosArchive = (props) => {
 
     return (
         <Layout>
             <NavCategories/>
-            <h2>Tu będą filmy róznych kategorii</h2>
+            <h2>Tu bedą wszystkie filmy</h2>
         </Layout>
     )
 
 }
-export default VideoArchive
+export default VideosArchive

@@ -6,6 +6,7 @@ import Layout from '../components/layout';
 
 
 const VideoTemplate = (props) => {
+    const videoContent = props.data.contentfulVideo
     return (
 
         <Layout>   
@@ -13,22 +14,22 @@ const VideoTemplate = (props) => {
             
             <div >
             
-            <h1 >{props.data.contentfulVideo.title}</h1>
+            <h1 >{videoContent.title}</h1>
             
             <div>
-            <iframe   title = {props.data.contentfulVideo.title} src={props.data.contentfulVideo.videoUrl}
+            <iframe   title = {videoContent.title} src={props.data.contentfulVideo.videoUrl}
                  frameborder="0"   width="960" height="540"  allowfullscreen="allowfullscreen"></iframe>
             </div>     
             <div>
-            <p>Główny utwór: </p><h3>{props.data.contentfulVideo.lyric.artists}</h3>
-            <p>-- {props.data.contentfulVideo.lyric.title} --</p>
+            <p>Główny utwór: </p><h3>{videoContent.lyric.artists}</h3>
+            <p>-- {videoContent.lyric.title} --</p>
             
             <div dangerouslySetInnerHTML={
-            {__html: `${props.data.contentfulVideo.lyric.text.childMarkdownRemark.excerpt}`} }/>
-            <p>-- {props.data.contentfulVideo.lyric.polskiTytu} --</p>
+            {__html: `${videoContent.lyric.text.childMarkdownRemark.excerpt}`} }/>
+            <p>-- {videoContent.lyric.polskiTytu} --</p>
             <div dangerouslySetInnerHTML={
-            {__html: `${props.data.contentfulVideo.lyric.polskiTekst.childMarkdownRemark.excerpt}`} }/>
-            <p onClick={() => navigate(`/text/${props.data.contentfulVideo.lyric.slug}`)}>Cały utwór</p>
+            {__html: `${videoContent.lyric.polskiTekst.childMarkdownRemark.excerpt}`} }/>
+            <p onClick={() => navigate(`/text/${videoContent.lyric.slug}`)}>Cały utwór</p>
             </div>   
         </div>
         </div>

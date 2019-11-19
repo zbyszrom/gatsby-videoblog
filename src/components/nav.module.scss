@@ -1,0 +1,21 @@
+.items {
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.item {
+    font-family: Muli,sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    transition: all 0.5s ease 0s;
+    text-decoration: none;
+    margin-left: 40px;
+    &:hover {
+        color: #f06666;
+    }
+}

@@ -10,7 +10,7 @@ const LyricTemplate = (props) => {
     if (!music) 
     {return (
       <Layout>
-        
+       
       <div > 
        
        <h1>{textContent.artists}</h1> 
@@ -27,7 +27,7 @@ const LyricTemplate = (props) => {
           </div> 
            
           </div> 
-           
+     
        </div>
       
       </Layout>)} 
@@ -36,7 +36,9 @@ const LyricTemplate = (props) => {
         <Layout>
         
         <div > 
-         
+        <audio controls>
+                  <source src={textContent.music.file.url} type="audio/mpeg" />
+            </audio> 
          <h1>{textContent.artists}</h1> 
          <div >
            <div >
@@ -47,11 +49,9 @@ const LyricTemplate = (props) => {
             <div >
             <h3>-- {textContent.polskiTytu} --</h3>
             <div dangerouslySetInnerHTML={
-            {__html: `${textContent.polskiTekst.childMarkdownRemark.html}`} }/>
+           {__html: `${textContent.polskiTekst.childMarkdownRemark.html}`} }/>
             </div> 
-            (<audio controls>
-                  <source src={textContent.music.file.url} type="audio/mpeg" />
-            </audio>) 
+            
             </div> 
              
          </div>
@@ -81,8 +81,7 @@ export const query = graphql`
     music {
       file {
         url
-      }
-      
+      }     
     }
   }
 

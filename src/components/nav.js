@@ -1,16 +1,18 @@
 import React from 'react'
 import {Link} from 'gatsby'
+import navS from './nav.module.scss'
 
 const Nav = () => (
     <nav>
-      <div >
+      <div className={navS.items}>
     
         
-    <Link  to='/'>Początek</Link>
-    <Link  to='/contact'>Kontakt</Link>
-    <Link  to='/video'>Filmy</Link>
-    <Link  to='/texts'>Teksty</Link>
-    <Link  to='/ebooks'>ebooki</Link>
+      <Link className = {navS.item} to='/'>Początek</Link>
+        <Link className = {navS.item} to='/contact'>Kontakt</Link>
+        <Link className = {navS.item} to='/video'>Filmy</Link>
+        <Link className = {navS.item} to='/texts'>Teksty</Link>
+        <Link className = {navS.item} to='/ebooks'>ebooki</Link>
+
 
 
     

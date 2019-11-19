@@ -1,10 +1,12 @@
 import React from 'react'
 import Nav from './nav'
 import Footer from './footer'
+import '../styles/global.scss'
+import layS from './layout.module.scss'
 
 const Layout = ({children}) => {
     return (
-        <div >           
+        <div className={layS.container}>            
             <Nav />
                 {children}            
             <Footer />

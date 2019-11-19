@@ -10,7 +10,23 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     
-    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-audio',
+            options: {
+              preload: 'auto',
+              loop: false,
+              controls: true,
+              muted: false,
+              autoplay: false
+            }
+          },
+        ]
+      }
+    },
     'gatsby-plugin-sass',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -27,6 +43,23 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `audio`,
+        path: `${__dirname}/src/audio`,
+      },
+    },
+    {
+      resolve: 'gatsby-remark-audio',
+      options: {
+        preload: 'auto',
+        loop: false,
+        controls: true,
+        muted: false,
+        autoplay: false
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,

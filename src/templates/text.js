@@ -6,8 +6,33 @@ import Layout from '../components/layout';
 
 const LyricTemplate = (props) => {
     const textContent = props.data.contentfulLyric
-
-    return (
+    const music = textContent.music
+    if (!music) 
+    {return (
+      <Layout>
+        
+      <div > 
+       
+       <h1>{textContent.artists}</h1> 
+       <div >
+         <div >
+       <h3>--{textContent.title}--</h3> 
+       <div dangerouslySetInnerHTML={
+          {__html: `${textContent.text.childMarkdownRemark.html}`} }/>
+          </div>
+          <div >
+          <h3>-- {textContent.polskiTytu} --</h3>
+          <div dangerouslySetInnerHTML={
+          {__html: `${textContent.polskiTekst.childMarkdownRemark.html}`} }/>
+          </div> 
+           
+          </div> 
+           
+       </div>
+      
+      </Layout>)} 
+    else
+    {return (
         <Layout>
         
         <div > 
@@ -24,13 +49,16 @@ const LyricTemplate = (props) => {
             <div dangerouslySetInnerHTML={
             {__html: `${textContent.polskiTekst.childMarkdownRemark.html}`} }/>
             </div> 
+            (<audio controls>
+                  <source src={textContent.music.file.url} type="audio/mpeg" />
+            </audio>) 
             </div> 
              
          </div>
         
         </Layout>
     )
-}
+}}
 
 export default LyricTemplate;
 
@@ -50,9 +78,17 @@ export const query = graphql`
         html
       }
     }
+    music {
+      file {
+        url
+      }
+      
+    }
+  }
 
 }
-}
+
+
 `
 
 

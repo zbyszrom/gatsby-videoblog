@@ -18,9 +18,9 @@ const VideosArchive = (props) => {
             <NavCategories/>
             
         
-        <div >
+        <div className='feed'>
             {videoContent.edges.map(edge => (
-                <div key={edge.node.id} >
+                <div key={edge.node.id} className="card">
                 <br/>
                 <h3 >{edge.node.title}</h3>
                 <img src={edge.node.featuredImage.fluid.src} alt=""
@@ -33,18 +33,18 @@ const VideosArchive = (props) => {
             
             ))}
         </div>
-        <div >
-            <div >
+        <div className = 'pagination'>
+            <div className = 'item'>
                 {!isFirst && (
                     <Link to={prevPage} rel='prev'>
-                        <div ></div>
+                        <div className = 'back'></div>
                     </Link>
                 )}
             </div>
-            <div >
+            <div className = 'item'>
                 {!isLast && (
                     <Link to={nextPage} rel='next'>
-                        <div ></div>
+                        <div className = 'next'></div>
                     </Link>
                 )}
             </div>

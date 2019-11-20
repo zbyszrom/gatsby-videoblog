@@ -24,10 +24,10 @@ const VideoTemplate = (props) => {
             <p>Główny utwór: </p><h3>{videoContent.lyric.artists}</h3>
             <p>-- {videoContent.lyric.title} --</p>
             
-            <div dangerouslySetInnerHTML={
+            <div className = 'excerpt' dangerouslySetInnerHTML={
             {__html: `${videoContent.lyric.text.childMarkdownRemark.excerpt}`} }/>
             <p>-- {videoContent.lyric.polskiTytu} --</p>
-            <div dangerouslySetInnerHTML={
+            <div className = 'excerpt' dangerouslySetInnerHTML={
             {__html: `${videoContent.lyric.polskiTekst.childMarkdownRemark.excerpt}`} }/>
             <p onClick={() => navigate(`/text/${videoContent.lyric.slug}`)}>Cały utwór</p>
             </div>   

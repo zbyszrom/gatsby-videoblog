@@ -16,9 +16,9 @@ const Misc = (props) => {
   <div ></div>
         
         
-        <div >
+        <div className='feed'>
             {videoContent.edges.map(edge => (
-                <div key={edge.node.id} >
+                <div key={edge.node.id} className="card">
                 <br/>
                 <h3 >{edge.node.title}</h3>
                 <img src={edge.node.featuredImage.fluid.src} alt=""

@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, navigate, StaticQuery } from 'gatsby'
-
+import '../styles/cards.scss'
 
 const Featured = () => (
 
@@ -34,9 +34,9 @@ query FeaturedQuery {
     }`
 } 
 render={data => (
-    <div >
+    <div className='feed'>
         {data.allContentfulVideo.edges.map(edge => (
-            <div key={edge.node.id} >
+            <div key={edge.node.id} className="card">
               <br/>
         <h3 >{edge.node.title}</h3>
         

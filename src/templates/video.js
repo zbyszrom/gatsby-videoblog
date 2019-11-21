@@ -1,12 +1,24 @@
 import React from 'react';
 import { graphql, navigate } from 'gatsby';
 import Layout from '../components/layout';
+import styled from "styled-components"
 
 
 
 
 const VideoTemplate = (props) => {
+
     const videoContent = props.data.contentfulVideo
+
+    const Excerpt = styled.div`
+    font-family: Muli,sans-serif;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 300;
+    color: #fff;
+    font-style: italic; 
+    `
+
     return (
 
         <Layout>   
@@ -24,10 +36,10 @@ const VideoTemplate = (props) => {
             <p>Główny utwór: </p><h3>{videoContent.lyric.artists}</h3>
             <p>-- {videoContent.lyric.title} --</p>
             
-            <div className = 'excerpt' dangerouslySetInnerHTML={
+            <Excerpt dangerouslySetInnerHTML={
             {__html: `${videoContent.lyric.text.childMarkdownRemark.excerpt}`} }/>
             <p>-- {videoContent.lyric.polskiTytu} --</p>
-            <div className = 'excerpt' dangerouslySetInnerHTML={
+            <Excerpt dangerouslySetInnerHTML={
             {__html: `${videoContent.lyric.polskiTekst.childMarkdownRemark.excerpt}`} }/>
             <p onClick={() => navigate(`/text/${videoContent.lyric.slug}`)}>Cały utwór</p>
             </div>   

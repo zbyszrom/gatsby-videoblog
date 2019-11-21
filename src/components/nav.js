@@ -1,25 +1,34 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import navS from './nav.module.scss'
+import styled from "styled-components"
+//import '../styles/global.scss'
+//import navS from './nav.module.scss'
 
-const Nav = () => (
+const Nav = () => {
+
+  const Items = styled.div`
+  background-color: transparent;
+    border: none;
+    height: 40px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  `
+    return(
+
     <nav>
-      <div className={navS.items}>
+      <Items>
+           
+        <Link className = 'nav-link1' to='/'>Początek</Link>
+        <Link className = 'nav-link1' to='/contact'>Kontakt</Link>
+        <Link className = 'nav-link1' to='/video'>Filmy</Link>
+        <Link className = 'nav-link1' to='/texts'>Teksty</Link>
+        <Link className = 'nav-link1' to='/ebooks'>ebooki</Link>
     
+      </Items> 
         
-      <Link className = {navS.item} to='/'>Początek</Link>
-        <Link className = {navS.item} to='/contact'>Kontakt</Link>
-        <Link className = {navS.item} to='/video'>Filmy</Link>
-        <Link className = {navS.item} to='/texts'>Teksty</Link>
-        <Link className = {navS.item} to='/ebooks'>ebooki</Link>
-
-
-
-    
-</div> 
-    
-    
     </nav>
-)
+)}
 
 export default Nav

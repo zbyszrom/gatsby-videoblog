@@ -23,24 +23,38 @@ body {
     font-weight: 300;
     color: #fff;    
   }
-  footer {
-    display: flex;
-    color: white;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .social {
-    background-color: #bbb;
-    margin: 0 15px
-} 
-  .excerpt {
+  .nav-link1 {
     font-family: Muli,sans-serif;
-    font-size: 16px;
-    line-height: 32px;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: 700;
     color: #fff;
-    font-style: italic; 
-
+    transition: all 0.5s ease 0s;
+    text-decoration: none;
+    margin-left: 40px;
+    &:hover {
+        color: #f06666;
+    }  
   }
+  .nav-link2 {
+    margin: 0 5px 0 5px;
+    font-family: Muli,sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 3px;
+        background: #f06666;
+        transition: width .5s;
+        margin-top: 1rem;
+    }
+    &:hover::after {
+        width: 100%;
+    }  
+  }
+  
  

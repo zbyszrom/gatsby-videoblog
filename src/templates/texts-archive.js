@@ -1,7 +1,7 @@
 import React from 'react'
 import {graphql, navigate, Link } from 'gatsby'
 import Layout from '../components/layout'
-
+import styled from "styled-components"
 
 const TextArchive = (props) => {
 
@@ -11,6 +11,15 @@ const TextArchive = (props) => {
         const isLast = currentPage === numPages
         const prevPage = currentPage - 1 === 1 ? '/texts' : `/texts/${currentPage - 1}`
         const nextPage = `/texts/${currentPage + 1}` 
+
+        const Excerpt = styled.div`
+    font-family: Muli,sans-serif;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 300;
+    color: #fff;
+    font-style: italic; 
+    `
 
     return (
         <Layout>
@@ -22,10 +31,10 @@ const TextArchive = (props) => {
                 <br/>
             <p >{edge.node.artists}</p>
             <p >{edge.node.title}</p>
-            <div className = 'excerpt'  dangerouslySetInnerHTML={
+            <Excerpt  dangerouslySetInnerHTML={
             {__html: `${edge.node.text.childMarkdownRemark.excerpt}`} }/>
             <p >{edge.node.polskiTytu}</p>
-            <div className = 'excerpt' dangerouslySetInnerHTML={
+            <Excerpt dangerouslySetInnerHTML={
             {__html: `${edge.node.polskiTekst.childMarkdownRemark.excerpt}`} }/>
             </div>
             

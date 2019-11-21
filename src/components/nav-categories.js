@@ -1,15 +1,28 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import navcatS from "./nav-categories.module.scss"
-const NavCategories = () => (
-    <div className={navcatS.nav}>
-            <Link to='/video' className={navcatS.link}>Wszystkie</Link>
-            <Link to='/category/am' className={navcatS.link}>Ameryka</Link>
-            <Link to='/category/eu' className={navcatS.link}>Europa</Link>
-            <Link to='/category/pl' className={navcatS.link}>Polska</Link>
-            <Link to='/category/rep' className={navcatS.link}>Reportaze</Link>
-            <Link to='/category/misc' className={navcatS.link}>Inne</Link>
-        </div> 
-)
+import styled from "styled-components"
+
+
+
+const NavCategories = () => {
+
+const Items = styled.div`
+    display: flex;
+    min-height: 200px;
+    padding: 60px 10% 0 10%;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;`
+
+    return(
+    <Items>
+            <Link to='/video' className='nav-link2'>Wszystkie</Link>
+            <Link to='/category/am' className='nav-link2'>Ameryka</Link>
+            <Link to='/category/eu' className='nav-link2'>Europa</Link>
+            <Link to='/category/pl' className='nav-link2'>Polska</Link>
+            <Link to='/category/rep' className='nav-link2'>Reportaze</Link>
+            <Link to='/category/misc' className='nav-link2'>Inne</Link>
+    </Items> 
+)}
 
 export default NavCategories

@@ -2,8 +2,8 @@ import React from 'react'
 
 const Introduction = () => {
     return(
-    
-    
+    <>
+    <div className='hero-home'/>
     <div >
     <h1 >O moich filmach</h1>
     <div >
@@ -13,7 +13,7 @@ const Introduction = () => {
             <h3 >A oto kilka wybranych filmów:</h3>
     </div>
     </div>
-
+    </>
 )
     }
 export default Introduction

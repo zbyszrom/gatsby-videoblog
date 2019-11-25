@@ -14,7 +14,7 @@ const VideosArchive = (props) => {
 
     return (
         <Layout>
-            <div></div>
+            <div className ='hero-arch' />
             <NavCategories/>
             
         

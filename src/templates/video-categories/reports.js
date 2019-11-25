@@ -13,7 +13,7 @@ const Reports = (props) => {
     return(
 <Layout>
   <NavCategories />
-  <div ></div>
+  <div className ='hero-arch' />
         
         
         <div className='feed'>

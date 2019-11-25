@@ -22,8 +22,10 @@ const TextArchive = (props) => {
     `
 
     return (
+
+      
         <Layout>
-            <div></div>
+            <div className ='hero-arch' />
             <h2>Teksty i tłumaczenia</h2>
             <div className='feed'>
             {textContent.edges.map(edge => (

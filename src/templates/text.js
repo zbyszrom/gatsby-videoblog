@@ -10,9 +10,8 @@ const LyricTemplate = (props) => {
     if (!music) 
     {return (
       <Layout>
-       
+      
       <div > 
-       
        <h1>{textContent.artists}</h1> 
        <div >
          <div >

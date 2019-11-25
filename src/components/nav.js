@@ -1,9 +1,6 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import styled from "styled-components"
-//import '../styles/global.scss'
-//import navS from './nav.module.scss'
-
 const Nav = () => {
 
   const Items = styled.div`

@@ -21,7 +21,8 @@ const VideoTemplate = (props) => {
 
     return (
 
-        <Layout>   
+        <Layout> 
+          
         <div >
             
             <div >

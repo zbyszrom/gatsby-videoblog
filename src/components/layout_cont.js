@@ -1,17 +1,14 @@
 import React from 'react'
 import LayoutGen from './layout_gen'
-import Footer from './footer.js'
-/*import '../styles/global.scss'
-import '../styles/pagination.scss'
-import '../styles/cards.scss'
-import '../styles/backgrounds.scss'*/
+import FooterBare from './footer-bare.js'
+
 
 const Layout = ({children}) => {
 
     return (
         <LayoutGen>
             {children} 
-            <Footer />
+            <FooterBare />
         </LayoutGen>
 
         

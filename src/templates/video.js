@@ -35,14 +35,14 @@ const VideoTemplate = (props) => {
             </div>     
             <div>
             <p>Główny utwór: </p><h3>{videoContent.lyric.artists}</h3>
-            <p>-- {videoContent.lyric.title} --</p>
+            <p className='title'> {videoContent.lyric.title}</p>
             
             <Excerpt dangerouslySetInnerHTML={
             {__html: `${videoContent.lyric.text.childMarkdownRemark.excerpt}`} }/>
-            <p>-- {videoContent.lyric.polskiTytu} --</p>
+            <p className='title'> {videoContent.lyric.polskiTytu} </p>
             <Excerpt dangerouslySetInnerHTML={
             {__html: `${videoContent.lyric.polskiTekst.childMarkdownRemark.excerpt}`} }/>
-            <p onClick={() => navigate(`/text/${videoContent.lyric.slug}`)}>Cały utwór</p>
+            <p className = 'link' onClick={() => navigate(`/text/${videoContent.lyric.slug}`)}>Cały utwór</p>
             </div>   
         </div>
         </div>

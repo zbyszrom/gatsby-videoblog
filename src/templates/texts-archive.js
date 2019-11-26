@@ -25,17 +25,17 @@ const TextArchive = (props) => {
 
       
         <Layout>
-            <div className ='hero-arch' />
+            <div className ='hero-head' />
             <h2>Teksty i tłumaczenia</h2>
             <div className='feed'>
             {textContent.edges.map(edge => (
                 <div key={edge.node.id} className="card" onClick={() => navigate(`/text/${edge.node.slug}`)}>
                 <br/>
-            <p >{edge.node.artists}</p>
-            <p >{edge.node.title}</p>
+                <h3>{edge.node.artists}</h3>
+            <h3 className='title'>{edge.node.title}</h3>
             <Excerpt  dangerouslySetInnerHTML={
             {__html: `${edge.node.text.childMarkdownRemark.excerpt}`} }/>
-            <p >{edge.node.polskiTytu}</p>
+            <h3 className='title'>{edge.node.polskiTytu}</h3>
             <Excerpt dangerouslySetInnerHTML={
             {__html: `${edge.node.polskiTekst.childMarkdownRemark.excerpt}`} }/>
             </div>

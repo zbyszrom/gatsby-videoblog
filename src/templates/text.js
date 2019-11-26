@@ -15,12 +15,12 @@ const LyricTemplate = (props) => {
        <h1>{textContent.artists}</h1> 
        <div >
          <div >
-       <h3>--{textContent.title}--</h3> 
+         <h3 className ='title'>{textContent.title}</h3> 
        <div dangerouslySetInnerHTML={
           {__html: `${textContent.text.childMarkdownRemark.html}`} }/>
           </div>
           <div >
-          <h3>-- {textContent.polskiTytu} --</h3>
+          <h3 className ='title'> {textContent.polskiTytu} </h3>
           <div dangerouslySetInnerHTML={
           {__html: `${textContent.polskiTekst.childMarkdownRemark.html}`} }/>
           </div> 
@@ -41,12 +41,12 @@ const LyricTemplate = (props) => {
          <h1>{textContent.artists}</h1> 
          <div >
            <div >
-         <h3>--{textContent.title}--</h3> 
+           <h3 className ='title'>{textContent.title}</h3> 
          <div dangerouslySetInnerHTML={
             {__html: `${textContent.text.childMarkdownRemark.html}`} }/>
             </div>
             <div >
-            <h3>-- {textContent.polskiTytu} --</h3>
+            <h3 className ='title'> {textContent.polskiTytu}</h3>
             <div dangerouslySetInnerHTML={
            {__html: `${textContent.polskiTekst.childMarkdownRemark.html}`} }/>
             </div> 

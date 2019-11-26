@@ -13,19 +13,19 @@ const Europe = (props) => {
     return(
 <Layout>
   <NavCategories />
-  <div className ='hero-arch' />
+  <div className ='hero-head' />
         
         
         <div className='feed'>
             {videoContent.edges.map(edge => (
                 <div key={edge.node.id} className="card">
                 <br/>
-                <h3 >{edge.node.title}</h3>
+                <h3 className='title'>{edge.node.title}</h3>
                 <img src={edge.node.featuredImage.fluid.src} alt=""
             onClick={() => navigate(`/video/${edge.node.slug}`)}/>
             
-            <p >{edge.node.lyric.artists}</p>
-            <p  onClick={() => navigate(`/text/${edge.node.lyric.slug}`)}>{edge.node.lyric.title}</p>
+            <p className = 'link' onClick={() => navigate(`/text/${edge.node.lyric.slug}`)} >
+                {edge.node.lyric.artists} - {edge.node.lyric.title}</p>
                 
             </div>
             

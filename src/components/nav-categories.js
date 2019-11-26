@@ -16,12 +16,12 @@ const Items = styled.div`
 
     return(
     <Items>
-            <Link to='/video' className='nav-link2'>Wszystkie</Link>
-            <Link to='/category/am' className='nav-link2'>Ameryka</Link>
-            <Link to='/category/eu' className='nav-link2'>Europa</Link>
-            <Link to='/category/pl' className='nav-link2'>Polska</Link>
-            <Link to='/category/rep' className='nav-link2'>Reportaze</Link>
-            <Link to='/category/misc' className='nav-link2'>Inne</Link>
+            <Link to='/video' className='nav-link'>Wszystkie</Link>
+            <Link to='/category/am' className='nav-link'>Ameryka</Link>
+            <Link to='/category/eu' className='nav-link'>Europa</Link>
+            <Link to='/category/pl' className='nav-link'>Polska</Link>
+            <Link to='/category/rep' className='nav-link'>Reportaze</Link>
+            <Link to='/category/misc' className='nav-link'>Inne</Link>
     </Items> 
 )}
 

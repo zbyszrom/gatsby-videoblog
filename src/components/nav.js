@@ -17,11 +17,11 @@ const Nav = () => {
     <nav>
       <Items>
            
-        <Link className = 'nav-link1' to='/'>Początek</Link>
-        <Link className = 'nav-link1' to='/contact'>Kontakt</Link>
-        <Link className = 'nav-link1' to='/video'>Filmy</Link>
-        <Link className = 'nav-link1' to='/texts'>Teksty</Link>
-        <Link className = 'nav-link1' to='/ebooks'>ebooki</Link>
+        <Link className = 'nav-link' to='/'>Początek</Link>
+        <Link className = 'nav-link' to='/contact'>Kontakt</Link>
+        <Link className = 'nav-link' to='/video'>Filmy</Link>
+        <Link className = 'nav-link' to='/texts'>Teksty</Link>
+        <Link className = 'nav-link' to='/ebooks'>ebooki</Link>
     
       </Items> 
         

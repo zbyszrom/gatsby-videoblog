@@ -38,11 +38,11 @@ render={data => (
         {data.allContentfulVideo.edges.map(edge => (
             <div key={edge.node.id} className="card">
               <br/>
-        <h3 >{edge.node.title}</h3>
+              <h3 className='title'>{edge.node.title}</h3>
         
         <img src={edge.node.featuredImage.fluid.src} alt=""
         onClick={() => navigate(`/video/${edge.node.slug}`)} />
-        <p  onClick={() => navigate(`/category/${edge.node.category.slug}`)} >{edge.node.category.category}</p>
+        <p className = 'link' onClick={() => navigate(`/category/${edge.node.category.slug}`)} >{edge.node.category.category}</p>
         
 
         </div>

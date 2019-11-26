@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql, navigate } from 'gatsby';
 import Layout from '../components/layout';
+import vidS from './video.module.scss'
 import styled from "styled-components"
 
 
@@ -23,17 +24,17 @@ const VideoTemplate = (props) => {
 
         <Layout> 
           
-        <div >
+        <div className ={vidS.info}>
             
-            <div >
+            
             
             <h1 >{videoContent.title}</h1>
             
-            <div>
-            <iframe   title = {videoContent.title} src={props.data.contentfulVideo.videoUrl}
+            <div className= {vidS.iS}>
+            <iframe  className={vidS.frame} title = {videoContent.title} src={props.data.contentfulVideo.videoUrl}
                  frameborder="0"   width="960" height="540"  allowfullscreen="allowfullscreen"></iframe>
             </div>     
-            <div>
+            <div className={vidS.content}>
             <p>Główny utwór: </p><h3>{videoContent.lyric.artists}</h3>
             <p className='title'> {videoContent.lyric.title}</p>
             
@@ -45,7 +46,7 @@ const VideoTemplate = (props) => {
             <p className = 'link' onClick={() => navigate(`/text/${videoContent.lyric.slug}`)}>Cały utwór</p>
             </div>   
         </div>
-        </div>
+       
         
         </Layout>
     )

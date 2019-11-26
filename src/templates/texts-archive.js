@@ -26,7 +26,7 @@ const TextArchive = (props) => {
       
         <Layout>
             <div className ='hero-head' />
-            <h2>Teksty i tłumaczenia</h2>
+            <h1>Teksty i tłumaczenia</h1>
             <div className='feed'>
             {textContent.edges.map(edge => (
                 <div key={edge.node.id} className="card" onClick={() => navigate(`/text/${edge.node.slug}`)}>

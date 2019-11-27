@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-import Footer_b from './footer-bare'
+import Footer_b from './footer_bare'
 
 const Footer = () => {
     

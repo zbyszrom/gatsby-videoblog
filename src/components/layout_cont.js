@@ -1,6 +1,6 @@
 import React from 'react'
 import LayoutGen from './layout_gen'
-import FooterBare from './footer-bare.js'
+import FooterBare from './footer_bare.js'
 
 const Layout = ({children}) => {
 

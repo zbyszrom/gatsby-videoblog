@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link, graphql, navigate } from 'gatsby'
 import Layout from '../../components/layout'
-import NavCategories from '../../components/nav-categories'
+import NavCategories from '../../components/nav_categories'
 
 const Poland = (props) => {
   const videoContent = props.data.allContentfulVideo

@@ -36,7 +36,7 @@ query BookdQuery {
            <h3 >{edge.node.subtitle}</h3>
            
            <img src={edge.node.coverPicture.fluid.src} alt=""
-           onClick={() => navigate(`/${edge.node.slug}`)} />
+           onClick={() => navigate(``)} />
            <div>
            
            <div dangerouslySetInnerHTML={

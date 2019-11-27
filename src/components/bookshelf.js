@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, navigate, StaticQuery } from 'gatsby'
-
+import bookS from './bookshelf.module.scss'
 const BookShelf = () => (
     <StaticQuery
     query = {graphql` 
@@ -27,26 +27,29 @@ query BookdQuery {
      }
 }
 `}
-    render={data => (
-       <div>
+    
+    render={data => 
+      
+     
+       <div className = {bookS.feed}>
            {data.allContentfulBooks.edges.map(edge => (
                <div key={edge.node.id} >
                  <br/>
-           <h3 >{edge.node.title}</h3>
+           <h2 >{edge.node.title}</h2>
            <h3 >{edge.node.subtitle}</h3>
-           
+        
            <img src={edge.node.coverPicture.fluid.src} alt=""
            onClick={() => navigate(``)} />
            <div>
            
-           <div dangerouslySetInnerHTML={
+           <div className= 'textblock'dangerouslySetInnerHTML={
            {__html: `${edge.node.excerpt.childMarkdownRemark.html}`} }/>
            </div> 
 
            </div>
            ))}
        </div>
-    )}
+    }
   />)
 
 export default BookShelf

@@ -16,15 +16,14 @@ const Introduction = () => {
     <h1 >O moich filmach</h1>
     <Content>
     
-    <div >
-            <p>Cześć, mam na imię Zbigniew. Moje hobby to fotografia, krótkie filmy, oraz tłumaczenie piosenek i poezji z angielskiego. </p>
-            <p>Witam serdecznie wszystkich odwiedzających moją stronę.</p>
-            
-            <h3 >A oto kilka wybranych filmów:</h3>
-    </div>       
-    </Content>
     
-    </>
+            <p>Cześć, mam na imię Zbigniew. Moje hobby to fotografia, krótkie filmy, oraz tłumaczenie piosenek i poezji z angielskiego. <br/>
+            Witam serdecznie wszystkich odwiedzających moją stronę </p>        
+            
+           
+    </Content>
+   </>
+    
 )
     }
 export default Introduction

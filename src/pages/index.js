@@ -8,6 +8,7 @@ import Featured from '../components/featured'
 const IndexPage = () => (
   <Layout> 
     <Intro/>
+    <h3> A oto kilka wybranych filmów:</h3>
     <Featured/>
   </Layout>
 )

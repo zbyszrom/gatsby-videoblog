@@ -1,15 +1,14 @@
 import React from 'react'
-import styled from "styled-components"
-import Footer_b from './footer_bare'
+import FooterB from './footer_bare'
 
 const Footer = () => {
     
     
 
     return (
-    <Footer_b>
+    <FooterB>
     <div className = 'hero-foot' />
-    </Footer_b>
+    </FooterB>
         
     )
 }

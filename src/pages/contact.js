@@ -6,7 +6,7 @@ const Contact = () => (
     
     <Layout>
     
-        <div className ='hero-arch' />   
+        <div className ='hero-head' />   
         <div className={cS.section}>                        
         <div className={cS.form}>
                 <h1>Kontakt</h1>

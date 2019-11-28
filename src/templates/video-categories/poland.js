@@ -10,6 +10,7 @@ const Poland = (props) => {
     const isLast = currentPage === numPages
     const prevPage = currentPage - 1 === 1 ? '/category/pl' : `/category/pl/${currentPage - 1}`
     const nextPage = `/category/pl/${currentPage + 1}`
+    
     return(
 <Layout>
   <NavCategories />

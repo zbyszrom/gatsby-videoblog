@@ -12,12 +12,9 @@ const Contact = () => (
                 <h1>Kontakt</h1>
                 
                 <div >
-                    <form method='post' name='contact' action='/thanks' data-netlify='true' netlify-honeypot='bot-field'>
+                    <form method='post' name='contact' action='/thanks' data-netlify='true'>
+                    <input type="hidden" name="form-name" value="contact" />
                     
-                    <div className={cS.field_hidden}>
-                        <label>Don't fill this out, human</label>
-                        <input name='bot' />
-                    </div>
                     <div className={cS.field}>
                         <label>Imię</label>
                         <input type='text' name='name' />

@@ -304,6 +304,103 @@ const getLyrics= makeRequest(graphql, `
 });
 
 
+//Create English category page, including pagination
+
+const getEnglish= makeRequest(graphql, `
+{
+  allContentfulLyric(filter: {categoryLyrics: {slug: {eq: "en"}}}) {
+    edges {
+      node {
+        id
+        slug
+      }
+    }
+  }
+}
+`).then(result => {
+  const lyrics = result.data.allContentfulLyric.edges
+  const lyricsPerPage = 9
+  const numPages = Math.ceil(lyrics.length / lyricsPerPage)
+
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/lcategory/en` : `/lcategory/en/${i + 1}`,
+      component: path.resolve("./src/templates/text_categories/english.js"),
+      context: {
+        limit: lyricsPerPage,
+        skip: i * lyricsPerPage,
+        numPages,
+        currentPage: i + 1
+      },
+    })
+  })
+});
+//Create Polish category page, including pagination
+
+const getPolish= makeRequest(graphql, `
+{
+  allContentfulLyric(filter: {categoryLyrics: {slug: {eq: "pl"}}}) {
+    edges {
+      node {
+        id
+        slug
+      }
+    }
+  }
+}
+`).then(result => {
+  const lyrics = result.data.allContentfulLyric.edges
+  const lyricsPerPage = 9
+  const numPages = Math.ceil(lyrics.length / lyricsPerPage)
+
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/lcategory/pl` : `/lcategory/pl/${i + 1}`,
+      component: path.resolve("./src/templates/text_categories/polish.js"),
+      context: {
+        limit: lyricsPerPage,
+        skip: i * lyricsPerPage,
+        numPages,
+        currentPage: i + 1
+      },
+    })
+  })
+});
+//Create Music_Only category page, including pagination
+
+const getMusic= makeRequest(graphql, `
+{
+  allContentfulLyric(filter: {categoryLyrics: {slug: {eq: "music"}}}) {
+    edges {
+      node {
+        id
+        slug
+      }
+    }
+  }
+}
+`).then(result => {
+  const lyrics = result.data.allContentfulLyric.edges
+  const lyricsPerPage = 9
+  const numPages = Math.ceil(lyrics.length / lyricsPerPage)
+
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/lcategory/music` : `/lcategory/music/${i + 1}`,
+      component: path.resolve("./src/templates/text_categories/music_only.js"),
+      context: {
+        limit: lyricsPerPage,
+        skip: i * lyricsPerPage,
+        numPages,
+        currentPage: i + 1
+      },
+    })
+  })
+});
+
+
+
+
 
 
 
@@ -316,7 +413,11 @@ return Promise.all([
   getRep,
   getMisc,
   getLyric,
-  getLyrics
+  getLyrics,
+  getEnglish,
+  getPolish,
+  getMusic
+
 
 
   

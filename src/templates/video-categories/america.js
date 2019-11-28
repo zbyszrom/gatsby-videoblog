@@ -3,6 +3,7 @@ import {Link, graphql, navigate } from 'gatsby'
 import Layout from '../../components/layout'
 import NavCategories from '../../components/nav_categories'
 
+
 const America = (props) => {
   const videoContent = props.data.allContentfulVideo
   const { currentPage, numPages } = props.pageContext
@@ -10,6 +11,8 @@ const America = (props) => {
     const isLast = currentPage === numPages
     const prevPage = currentPage - 1 === 1 ? '/category/am' : `/category/am/${currentPage - 1}`
     const nextPage = `/category/am/${currentPage + 1}`
+
+    
     return(
 <Layout>
   <NavCategories />

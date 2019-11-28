@@ -1,19 +1,18 @@
 import React from 'react'
-import {graphql, navigate, Link } from 'gatsby'
-import Layout from '../components/layout'
-import NavCategoriesLyrics from '../components/nav_lyrics'
+import {Link, graphql, navigate } from 'gatsby'
+import Layout from '../../components/layout'
+import NavLyrics from '../../components/nav_lyrics'
 import styled from "styled-components"
 
-const TextArchive = (props) => {
-
+const English = (props) => {
     const textContent = props.data.allContentfulLyric
     const { currentPage, numPages } = props.pageContext
-        const isFirst = currentPage === 1
-        const isLast = currentPage === numPages
-        const prevPage = currentPage - 1 === 1 ? '/texts' : `/texts/${currentPage - 1}`
-        const nextPage = `/texts/${currentPage + 1}` 
+    const isFirst = currentPage === 1
+    const isLast = currentPage === numPages
+    const prevPage = currentPage - 1 === 1 ? '/lcategory/en' : `/lcategory/en/${currentPage - 1}`
+    const nextPage = `/lcategory/en/${currentPage + 1}`
 
-        const Excerpt = styled.div`
+    const Excerpt = styled.div`
     font-family: Muli,sans-serif;
     font-size: 16px;
     line-height: 32px;
@@ -21,15 +20,13 @@ const TextArchive = (props) => {
     color: #fff;
     font-style: italic; 
     `
-
-    return (
-
-      
-        <Layout>
-            <div className ='hero-head' />
-            <NavCategoriesLyrics/>
-            <h1>Teksty i tłumaczenia</h1>
-            <div className='feed'>
+      return(
+  <Layout>
+    <NavLyrics />
+    <div className ='hero-head' />
+    
+    <h1>Teksty i tłumaczenia</h1>
+    <div className='feed'>
             {textContent.edges.map(edge => (
                 <div key={edge.node.id} className="card" onClick={() => navigate(`/text/${edge.node.slug}`)}>
                 <br/>
@@ -60,21 +57,23 @@ const TextArchive = (props) => {
                 )}
             </div>
         </div>  
-        </Layout>
+          
+          
+         
+          
+  </Layout>
+      )
+  }
+  export default English
 
-    )
-
-}
-export default TextArchive
-
-export const pageQuery = graphql`
-query LyricsArchiveQuery ($skip: Int!, $limit: Int!){
-    allContentfulLyric(
-      sort: { fields: artists }
-        skip: $skip
-        limit: $limit
-                      ) 
-    {
+  export const pageQuery = graphql` 
+ query EnglishQuery($skip: Int!, $limit: Int!)  {
+   allContentfulLyric(
+    filter: {categoryLyrics: {slug: {eq: "en"}}}
+    sort: { fields: artists }
+    skip: $skip
+    limit: $limit
+          ) {
       edges {
         node {
             id

@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, navigate } from 'gatsby';
-import Layout from '../components/layout';
+import Layout from '../components/layout_cont';
 import vidS from './video.module.scss'
 import styled from "styled-components"
 
@@ -23,7 +23,7 @@ const VideoTemplate = (props) => {
     return (
 
         <Layout> 
-          
+         
         <div className ={vidS.info}>
             
             

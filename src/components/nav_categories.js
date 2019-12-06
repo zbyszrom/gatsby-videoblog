@@ -13,7 +13,7 @@ const NavCategories = () => {
             <Link to='/category/am' className={navS.link}>Ameryka</Link>
             <Link to='/category/eu' className={navS.link}>Europa</Link>
             <Link to='/category/pl' className={navS.link}>Polska</Link>
-            <Link to='/category/rep' className={navS.link}>Reportaze</Link>
+            <Link to='/category/rep' className={navS.link}>Reportaże</Link>
             <Link to='/category/misc' className={navS.link}>Inne</Link>
     </div> 
 )}

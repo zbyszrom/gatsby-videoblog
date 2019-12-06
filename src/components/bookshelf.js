@@ -22,6 +22,14 @@ query BookdQuery {
                html
              }
            }
+           pdf {
+            file {
+              contentType
+              fileName
+              url
+            }
+            contentful_id
+          }
          }
        }
      }
@@ -39,13 +47,15 @@ query BookdQuery {
            <h3 >{edge.node.subtitle}</h3>
         
            <img src={edge.node.coverPicture.fluid.src} alt=""
-           onClick={() => navigate(``)} />
+           />
            <div>
-           
+          
            <div className= 'textblock'dangerouslySetInnerHTML={
-           {__html: `${edge.node.excerpt.childMarkdownRemark.html}`} }/>
+           {__html: `${edge.node.excerpt.childMarkdownRemark.html}`} } />
            </div> 
-
+            <p> 
+             <a  className ='link' target="_blank"  href = {edge.node.pdf.file.url} > Aby przeczytać całość otwórz pdf</a>
+             </p>
            </div>
            ))}
        </div>

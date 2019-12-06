@@ -70,7 +70,7 @@ export default TextArchive
 export const pageQuery = graphql`
 query LyricsArchiveQuery ($skip: Int!, $limit: Int!){
     allContentfulLyric(
-      sort: { fields: artists }
+      sort: { fields: title }
         skip: $skip
         limit: $limit
                       ) 

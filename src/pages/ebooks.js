@@ -18,9 +18,8 @@ const EBooks = () => {
      <>
     <div className='hero-head'/>
     <Content>
-          <p>Tutaj zamieściłem teksty mojego autorstwa. Pierwszy z nich zatytułowany "Buława marszałkowska" jest zestawem mini - opowiadań z okresu II Wojny Światowej i tuż po wojnie, opartych na opowieściach rodzinnych, jednak z elementami fikcji literackiej. Drugi tekst "Szkice historyczno-polityczne" jest zestawem krótkich artykułów na tematy związane z historią najnowszą i polityką, które pisywałem dla pewnego portalu internetowego. <br/>
-          Teksty te opracowałem w postaci e-booków w formacie e-pub. W celu ich ściągnięcia na dysk, wystarczy kliknąć w odpowiednią planszę. Żeby czytać e-booki w formacie e-pub, trzeba mieć odpowiednie (darmowe) oprogramowanie, które jest dostępne zarówno dla urządzeń stacjonarnych (np. Windows), jak też mobilnych (np. dla systemu Android w w Google Play)<br/>
-          Teksty te są również dostępne w formacie dla urządzenia Kindle (mobi, lub azw3): </p>
+          <p>Tutaj zamieściłem teksty mojego autorstwa. Pierwszy z nich zatytułowany "Buława marszałkowska" jest zestawem mini - opowiadań z czasów II Wojny Światowej i tuż powojennych. Są one oparte na opowieściach rodzinnych, jednak z elementami fikcji literackiej. Drugi tekst "Szkice historyczno-polityczne" jest zestawem krótkich artykułów na tematy związane z historią najnowszą i polityką, które kilka lat temu pisywałem dla pewnego portalu internetowego. <br/>
+          Jest też album (w formacie pdf), który złożyłem ze zdjęć zrobionych podczas pielgrzymki do Ziemi Świętej w 2014 r. Dodałem również refleksje, które spisałem wkrótce po powrocie.</p>
             
     </Content>
     </>

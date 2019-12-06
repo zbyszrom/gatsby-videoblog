@@ -57,8 +57,11 @@ body {
     font-weight: 700;
     color: #fff;
     margin: 15px 0 0px 0;
+    text-decoration: none;
     &:hover {
         color:#f06666;
+        cursor: pointer;
+        transform: scale(1.05);
     }
 }
 .textblock {

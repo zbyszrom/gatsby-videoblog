@@ -12,6 +12,7 @@ const EBooks = () => {
     min-height: 100px;
     max-width: 800px;
     margin-top: 20px;
+    align-items: center;
     `
     return (
   <Layout>

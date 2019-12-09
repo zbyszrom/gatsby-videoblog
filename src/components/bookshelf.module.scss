@@ -1,7 +1,21 @@
 .feed {
    
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 0px;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     text-align:center;
+    
+}
+.card {
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    
 }

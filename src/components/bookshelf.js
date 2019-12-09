@@ -5,7 +5,8 @@ const BookShelf = () => (
     <StaticQuery
     query = {graphql` 
 query BookdQuery {
-   allContentfulBooks {
+   allContentfulBooks (
+    sort: {fields: featuredOrder}){
        edges {
          node {
            id
@@ -39,9 +40,9 @@ query BookdQuery {
     render={data => 
       
      
-       <div className = {bookS.feed}>
+       <div className = 'feed'>
            {data.allContentfulBooks.edges.map(edge => (
-               <div key={edge.node.id} >
+               <div key={edge.node.id} className={bookS.card} >
                  <br/>
            <h2 >{edge.node.title}</h2>
            <h3 >{edge.node.subtitle}</h3>

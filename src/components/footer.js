@@ -6,10 +6,12 @@ const Footer = () => {
     
 
     return (
-    <FooterB>
+        <>
     <div className = 'hero-foot' />
+    <FooterB>
+    
     </FooterB>
-        
+    </>   
     )
 }
 

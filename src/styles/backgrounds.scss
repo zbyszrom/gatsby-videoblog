@@ -23,15 +23,22 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 430px;
+        height: 290px;
         width: 100vw;
         
         z-index: -1;
-        transform: translateY(-430px);
+        transform: translateY(-100px);
         background-image: linear-gradient(
             to bottom, 
             rgba(10,10,10,1) 0%,
             rgba(10,10,10,0.6) 50%,
             rgba(10,10,10,1) 100%), url('../images/general-footer-image.jpg') 
         
+    }
+    @media screen and (max-width: 440px) {
+        .hero-foot {
+           display: none;
+
+        }
+
     }

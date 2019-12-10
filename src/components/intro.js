@@ -6,7 +6,7 @@ const Introduction = () => {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 100px;
+    min-height: 80px;
     max-width: 800px;
     margin-top: 40px;
     `

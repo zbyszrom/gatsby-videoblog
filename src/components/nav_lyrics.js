@@ -9,10 +9,10 @@ const NavCategoriesLyrics = () => {
 
     return(
     <div className = {navS.nav}>
-            <Link to='/texts' className={navS.link}>Wszystkie</Link>
-            <Link to='/lcategory/en' className={navS.link}>Angielskie</Link>
-            <Link to='/lcategory/pl' className={navS.link}>Polskie</Link>
-            <Link to='/lcategory/music' className={navS.link}>Tylko Muzyka</Link>
+            <Link to='/texts' className={navS.link} activeStyle={{ color: "#f06666" }}>Wszystkie</Link>
+            <Link to='/lcategory/en' className={navS.link} activeStyle={{ color: "#f06666" }}>Angielskie</Link>
+            <Link to='/lcategory/pl' className={navS.link} activeStyle={{ color: "#f06666" }}>Polskie</Link>
+            <Link to='/lcategory/music' className={navS.link} activeStyle={{ color: "#f06666" }}>Tylko Muzyka</Link>
             
     </div> 
 )}

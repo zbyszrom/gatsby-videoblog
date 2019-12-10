@@ -10,11 +10,11 @@ const Nav = () => {
     <nav>
       <div className ={nS.items}>
            
-        <Link className = {nS.navLink} to='/'>Początek</Link>
-        <Link className = {nS.navLink} to='/contact'>Kontakt</Link>
-        <Link className = {nS.navLink} to='/video'>Filmy</Link>
-        <Link className = {nS.navLink} to='/texts'>Teksty</Link>
-        <Link className = {nS.navLink} to='/ebooks'>ebooki</Link>
+        <Link className = {nS.navLink} to='/' activeStyle={{ color: "#f06666" }}>Początek</Link>
+        <Link className = {nS.navLink} to='/contact' activeStyle={{ color: "#f06666" }}>Kontakt</Link>
+        <Link className = {nS.navLink} to='/video' activeStyle={{ color: "#f06666" }}>Filmy</Link>
+        <Link className = {nS.navLink} to='/texts' activeStyle={{ color: "#f06666" }}>Teksty</Link>
+        <Link className = {nS.navLink} to='/ebooks' activeStyle={{ color: "#f06666" }}>ebooki</Link>
     
       </div> 
         

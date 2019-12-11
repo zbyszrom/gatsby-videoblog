@@ -45,7 +45,7 @@ query BookdQuery {
                <div key={edge.node.id} className={bookS.card} >
                  <br/>
            <h2 >{edge.node.title}</h2>
-           <h3 >{edge.node.subtitle}</h3>
+           <h3>{edge.node.subtitle}</h3>
         
            <img src={edge.node.coverPicture.fluid.src} alt=""
            />
